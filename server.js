@@ -5,7 +5,6 @@ import admin from 'firebase-admin';
 import dotenv from 'dotenv';
 dotenv.config();
 
-
 // Initialize Firebase Admin SDK
 if (!admin.apps.length) {
     const serviceAccount = {
@@ -39,15 +38,6 @@ app.get("/", function(req, res){
     res.json({
         message: "success",
         data: "api running"
-    })
-})
-
-app.get("/other", function(req, res){
-    res.json({
-        message: "working test test",
-        data: process.env.FIREBASE_PRIVATE_KEY
-            .replace(/\\n/g, '\n') //` Fix newlines
-            .replace(/_/g, ' '), // Replace underscores with spaces`
     })
 })
 
