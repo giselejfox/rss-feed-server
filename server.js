@@ -144,7 +144,7 @@ app.post('/update-feeds', async (req, res) => {
 
 app.get("/other", function(req, res){
     res.json({
-        message: "working test",
+        message: "working test test",
         data: process.env.FIREBASE_PRIVATE_KEY
             .replace(/\\n/g, '\n') //` Fix newlines
             .replace(/_/g, ' '), // Replace underscores with spaces`
